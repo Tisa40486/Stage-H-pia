@@ -2,14 +2,14 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <time.h>
-
+// vrai version
 #define LEN_X 5
 // largeur
 #define LEN_Y 5
 // hauteur
 #define NUM_BOMB 10
 // nombre bomb
-const char hidden_cell = 'O';
+const char hidden_cell = 'X';
 const char bomb_cell = '*';
 const char flag_cell = 'F';
 
@@ -22,11 +22,11 @@ void print_bool(bool tableau[LEN_X][LEN_Y])
         {
             if (tableau[i][j])
             {
-                printf("X\t");
+                printf("*\t");
             }
             else
             {
-                printf("O\t");
+                printf("X\t");
             }
         }
         printf("\n");
@@ -241,6 +241,7 @@ void gamechoice(bool bomb[LEN_X][LEN_Y], char revetement[LEN_X][LEN_Y])
     }
     else
     {
+        print_bool(bomb);
         printf("Perdu !");
         printf("\n");
     }
